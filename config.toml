@@ -1,4 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://trvoid.github.io"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "trvoid"
 theme = "docdock"
+
+[output]
+home = ["HTML", "RSS", "JSON"]

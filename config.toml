@@ -1,7 +1,7 @@
-baseURL = "https://trvoid.github.io"
+baseURL = "/"
 languageCode = "en-us"
 title = "trvoid"
 theme = "docdock"
 
-[output]
+[outputs]
 home = ["HTML", "RSS", "JSON"]

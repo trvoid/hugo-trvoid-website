@@ -1,10 +1,8 @@
 ---
-title: "Hugo + DocDock 웹사이트를 GitHub으로 서비스"
+title: "Hugo + DocDock 웹사이트를 GitHub으로 호스팅하기"
 ---
 
 [Hugo](https://gohugo.io/) 프레임워크에 [DocDock](https://themes.gohugo.io/docdock/) 테마를 추가하여 정적 웹사이트를 만들고 이를 [GitHub](https://github.com/)에 올려서 서비스하는 과정을 정리하였습니다.
-
-[TOC]
 
 ## 1 제품 소개
 
@@ -18,10 +16,12 @@ title: "Hugo + DocDock 웹사이트를 GitHub으로 서비스"
 * 기술 문서 작성을 위한 Hugo용 테마.
 * Learn 테마를 기반으로 함.
 
-### 1.3 GitHub
+### 1.3 GitHub Pages
 
-* 소스 버전 관리 서비스 제공.
-* 웹사이트 서비스 제공.
+* 정적 웹사이트 호스팅 서비스를 무료로 제공.
+* GitHub 저장소와 직접 연결.
+* 개인, 조직, 프로젝트 유형에 따른 페이지 제공.
+* 사이트 저장 용량은 최대 1GB.
 
 ## 2 Hugo와 DocDock 설치
 
@@ -127,8 +127,7 @@ content 폴더 아래에 다음 파일들을 만들고 제시한 내용들을 �
 
 1) Hugo 개발 서버를 실행합니다.
 
-    > cd quickstart
-    > hugo serve
+    > hugo server
 
 2) 브라우져로 아래 주소에 연결합니다.
 
@@ -138,19 +137,19 @@ content 폴더 아래에 다음 파일들을 만들고 제시한 내용들을 �
 
 ## 4 컨텐츠 배치
 
-앞 단원에서 생성한 컨텐츠를 배치용으로 변환한 다음 GitHub 저장소에 올립니다. GitHub 계정의 사용자 이름이 *yourname*이라고 하면 GitHub 저장소 주소와 여기에 연결된 웹사이트 주소는 다음과 같습니다.
+content 폴더 아래에서 생성한 컨텐츠를 GitHub Pages를 통해서 서비스하려면 먼저 배치용 컨텐츠로 변환해야 합니다. 변환 결과는 public 폴더 아래에 저장되고 public 폴더 아래의 내용을 GitHub 저장소에 올립니다. GitHub 계정의 사용자 이름이 *yourname* 이라고 하면 GitHub 저장소 주소와 여기에 연결된 웹사이트 주소는 다음과 같습니다.
 
-저장소 주소:
+GitHub 저장소 주소:
 
     https://github.com/yourname/yourname.github.io.git
 
-웹사이트 주소:
+GitHub Pages 웹사이트 주소:
     
     https://yourname.github.io
 
 ### 4.1 설정
 
-config.toml
+config.toml 파일을 열고 baseURL 항목의 값을 GitHub Pages 웹사이트 주소로 지정합니다.
 
     baseURL = "https://yourname.github.io"
     languageCode = "en-us"
@@ -159,12 +158,13 @@ config.toml
 
 ### 4.2 컨텐츠를 배치용으로 변환
 
-    > cd quickstart
+아래와 같이 명령을 실행하여 배치용 컨텐츠로 변환합니다.
+
     > hugo
 
 위 명령이 끝나면 아래 폴더에서 배치용 컨텐츠를 찾을 수 있습니다.
 
-    quickstart/public/
+    public/
     
 ### 4.3 컨텐츠를 GitHub에 배치
 
@@ -187,3 +187,5 @@ config.toml
 * [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/)
 * [Hugo Themes](https://themes.gohugo.io/)
 * [How To Install and Use Hugo, a Static Site Generator, on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-hugo-a-static-site-generator-on-ubuntu-14-04)
+* [What is GitHub Pages?](https://help.github.com/articles/what-is-github-pages/)
+* [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)

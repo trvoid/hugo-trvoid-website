@@ -8,11 +8,11 @@ title: "ML03 - 로지스틱 회귀"
 
 이해를 돕기 위하여 다음과 같이 두 종류의 데이터 세트를 준비하고 결과를 비교해 봅니다.
 
-* DS-A:
+**Dataset-A:**
 
 $$x=\left[ 1,2,3,4,5,6,7,8,9,10 \right] ,\quad y=[0,0,0,0,0,1,1,1,1,1]$$
 
-* DS-B:
+**Dataset-B:**
 
 $$x=\left[ 1,2,3,4,5,6,7,8,9,10 \right] ,\quad y=[0,0,0,0,1,0,1,1,1,1]$$
 
@@ -92,7 +92,7 @@ $$h_w(x)=\frac {1} {1+{ e }^{ -z(x) }}$$
 
 {{%alert info %}}문제: logit 함수가 아닌 $h_w(x)$의 함수식을 찾아 보시오.{{%/alert%}}
 
-## 3 Cost function 정의하기
+## 3 비용 함수 정의하기
 
 선형 회귀에서와 같이 최소자승법을 사용하여 비용 함수를 정의하면 non-convex 함수가 되어 최소값을 찾는 것이 어려워집니다.
 
@@ -159,6 +159,10 @@ $$</div>
 아래 링크는 실습을 위해 작성한 파이썬 노트북입니다.
 
 * [ML03-로지스틱 회귀](https://github.com/trvoid/ml-study/blob/master/ML03-LogisticRegression.ipynb)
+
+이 문서의 **1.1 데이터 세트**에서 제시한 두 종류의 데이터 세트에 대하여 로지스틱 회귀를 적용하여 구한 파라미터로 hypothesis를 그리면 다음 그림과 같습니다.
+
+![Logistic regression](/ml/ml03-logistic-regression.png)
 
 ## 5 참고 자료
 

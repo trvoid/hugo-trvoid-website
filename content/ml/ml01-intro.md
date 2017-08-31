@@ -1,3 +1,3 @@
 ---
-Title: "ML01 - Introduction"
+Title: "ML01 - 소개"
 ---

@@ -1,4 +1,6 @@
 baseURL = "/"
+relativeURLs = true
+uglyURLs = true
 languageCode = "en-us"
 title = "trvoid"
 theme = "docdock"
